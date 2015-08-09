@@ -1,0 +1,24 @@
+<div class="TODO-list">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+              <th>#</th>
+              <th>Task</th>
+              <th>Date</th>
+              <th>Finished</th>
+            </tr>
+        </thead>
+    <div>
+        <!-- controller start  ng-click="done={'text-decoration':'line-through'}"-->
+        <tbody class="col-lg- 6">
+            <tr ng-class="{no_strike:task.STATUS==0,strike:task.STATUS==1}" ng-repeat="task in tasks track by $index">
+              <td>{{$index+1}}</td>
+              <td>{{task.TASK}}</td>
+              <td>{{task.DATE | date}}</td>
+              <td><a style="cursor:pointer;text-decoration: none;" ng-model="task.STATUS" href="" ng-click="changeStatus(task.ID, task.STATUS)">Done</a>
+              <a href="" class="pull-right"><i class="glyphicon glyphicon-trash" ng-click="deleteTask(task.ID)"></i></a></td>
+          </tr>
+      </tbody>
+    </div>
+    </table>
+</div>
