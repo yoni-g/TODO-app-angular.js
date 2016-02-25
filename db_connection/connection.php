@@ -1,7 +1,7 @@
 <?php
-$servername = "fdb3.runhosting.com";
-$username = "1868644_bytecode";
-$password = "qwer1qwerQ";
+$servername = "test.example";
+$username = "yourUserName";
+$password = "yourPass";
 $db_name = "1868644_bytecode";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $db_name);
